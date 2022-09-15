@@ -6,8 +6,9 @@ draft: false
 
 If your api key has been compromised or you simply want to change it, you can revoke the old one and request a securely generated api key.
 
-Base url `https://omega-stream.site/company`
-this will be called from now as *[base_url]*
+{{% notice note %}}
+Base url `https://omega-stream.site/company` this will be called from now as *`[base_url]`*
+{{% /notice %}}
 
 ### Method
 **POST**

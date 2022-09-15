@@ -6,10 +6,11 @@ draft: false
 
 If you have videos stored in a cloud storage bucket, you can simply pass a HTTP link for the file. Stream will fetch the file and make it available for streaming.
 
-By using [webhooks](/) you can receive a notification when the video is ready to be played or if it errors.
+By using [webhooks](/video/webhooks/) you can receive a notification when the video is ready to be played or if it errors.
 
-Base url `https://omega-stream.site/company`
-this will be called from now as *[base_url]*
+{{% notice note %}}
+Base url `https://omega-stream.site/company` this will be called from now as *`[base_url]`*
+{{% /notice %}}
 
 ## Step 1: Make an API call with the link
 
@@ -30,7 +31,7 @@ POST: [base_url]/client/video/stream/copy
 |---------|----------|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | title   | false    | this is the video title.                                                       | video                                                                         |
 | url     | **true** | video direct url                                                               | https://storage.googleapis.com/zaid-test/Watermarks%20Demo/cf-ad-original.mp4 |
-| headers | false    | those are the video headers which will be sent with the *url* to request video | {user-id":"id-1234"}                                                         |
+| headers | false    | those are the video headers which will be sent with the *url* to request video | json formatted, ex: `{"user-id":"id-1234"}`|
 
 
 
@@ -74,4 +75,4 @@ status code: `OK 200`
 
 ## Step 2: Poll the API or wait for a webhook
 
-Because Stream must download and encode the video, the video might not be available for a few seconds to a few minutes depending on the length of your video. You should poll the Stream API until `readyToStream` is `true`, or use [webhooks](/) to be notified when a video is ready for streaming.
+Because Stream must download and encode the video, the video might not be available for a few seconds to a few minutes depending on the length of your video. You should poll the Stream API until `readyToStream` is `true`, or use [webhooks](/video/webhooks/) to be notified when a video is ready for streaming.
