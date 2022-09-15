@@ -115,9 +115,12 @@ Available events are
 
 - `video.failed_to_delete` ✅ Triggered when the video deleted failed.
 
-Keys:
+**Keys:**
+
  - ✅ Alive and kicking.
+
  - ⚠️ Only available for *stream copy* videos--videos which was downloaded from a url--FOR NOW.
+
  - ❌ Doesn't have any effect right now.
 
 
