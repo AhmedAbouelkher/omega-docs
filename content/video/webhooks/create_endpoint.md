@@ -96,14 +96,23 @@ To see the [full body](#full-event-body)
 {{% /expand%}}
 
 Available events are
+
 - `video.uploaded` ⚠️ Triggered when video is uploaded or ready to be pushed for processing.
+
 - `video.ready_for_processing` ⚠️ Triggered when video is pushed for processing and ready (but not yet processed).
+
 - `video.in_progress` ✅ Triggered when video is being processed right now.
+
 - `video.completed_processing` ⚠️ Triggered when video processing is complete. (but not yet confirmed to be working and with no confirmed success)
+
 - `video.process_failed` ❌ Triggered when video processing failed.
+
 - `video.process_succeeded` ❌ Triggered when video processing succeeded.
+
 - `video.ready_to_watch` ⚠️ Triggered when video is ready to be watched right now.
+
 - `video.deleted` ✅ Triggered when the video is successfully deleted.
+
 - `video.failed_to_delete` ✅ Triggered when the video deleted failed.
 
 Keys:

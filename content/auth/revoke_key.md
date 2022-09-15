@@ -10,12 +10,9 @@ If your api key has been compromised or you simply want to change it, you can re
 Base url `https://omega-stream.site/company` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
-### Method
-**POST**
-
 ### Endpoint
 ```url
-[base_url]/client/revoke-api-key
+POST: [base_url]/client/revoke-api-key
 ```
 
 ### Headers

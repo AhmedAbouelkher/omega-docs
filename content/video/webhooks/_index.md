@@ -10,5 +10,4 @@ pre: "<b>3. </b>"
 
 Webhooks notify your service when videos successfully finish processing and are ready to stream or if your video enters an error state.
 
-- [Create Endpoint](/video/webhooks/create_endpoint/)
-- [Fetch all hooks](/video/webhooks/fetch_all_hooks/)
+{{% children  %}}

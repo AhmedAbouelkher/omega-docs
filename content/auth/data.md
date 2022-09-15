@@ -10,13 +10,9 @@ Base url `https://omega-stream.site/company` this will be called from now as *`[
 
 From here you can fetch your basic company info using your api key.
 
-
-### Method
-**GET**
-
 ### Endpoint
 ```url
-[base_url]/client/data
+GET: [base_url]/client/data
 ```
 
 ### Headers
