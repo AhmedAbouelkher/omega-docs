@@ -1,0 +1,7 @@
+baseURL = 'https://docs.omega-stream.site/'
+languageCode = 'en-us'
+title = 'Omega Docs'
+theme = 'learn'
+
+[params]
+  themeVariant = "cust"
