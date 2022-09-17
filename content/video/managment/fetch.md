@@ -19,7 +19,7 @@ GET: [base_url]/client/video/:uuid
 ### Headers
 | Key           | Value              | Details                                                 |
 |---------------|--------------------|---------------------------------------------------------|
-| Authorization | Bearer {{api_key}} | api key is very important here to authorize your request. |
+| Authorization | Bearer *{{api_key}}* | api key is very important here to authorize your request. |
 | Content-Type  | application/json   |                                                         |
 
 

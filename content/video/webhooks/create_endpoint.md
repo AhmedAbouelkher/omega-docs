@@ -28,7 +28,7 @@ GET: [base_url]/client/webhooks/
 #### Headers
 | Key           | Value              | Details                                                 |
 |---------------|--------------------|---------------------------------------------------------|
-| Authorization | Bearer {{api_key}} | api key is very important here to authorize your request. |
+| Authorization | Bearer *{{api_key}}* | api key is very important here to authorize your request. |
 | Content-Type  | application/json   |     
 
 #### Events
@@ -192,5 +192,5 @@ Status code: `OK 200`
 }
 ```
 {{% notice tip %}}
-You can learn more about **active** field from [here](/video/webhooks/update_status/)
+You can learn more about **active** field from [here](/video/webhooks/hooks/#update-status)
 {{% /notice %}}

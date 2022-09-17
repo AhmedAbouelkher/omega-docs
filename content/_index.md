@@ -6,10 +6,8 @@ chapter: true
 weight: 5
 ---
 
-### Welcome to Omega Streaming api docs
+### Welcome to **Omega Stream** api docs
 
 Here you can find the latest documentation for our enterprise api with examples and more than one language.
-
-**BASE URL `https://omega-stream.site/company`**
 
 {{% children  %}}
