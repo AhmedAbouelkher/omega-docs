@@ -1,7 +1,7 @@
 ---
 title: "Fetch all"
 date: 2022-09-15T18:03:51+02:00
-draft: false
+draft: true
 ---
 
 Fetches all the videos uploaded by the company in a sorted order (newest is **up**), with no pagination.
