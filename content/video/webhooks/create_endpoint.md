@@ -8,7 +8,7 @@ weight: 1
 Creating a new webhook endpoint is very important process, but simple to achieve with our api.
 
 {{% notice note %}}
-Base url `https://omega-stream.site/company` this will be called from now as *`[base_url]`*
+Base url `https://omegastream.net/company` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
 ### Endpoint

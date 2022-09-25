@@ -10,7 +10,7 @@ weight: 1
 Fetches all company webhooks endpoints.
 
 {{% notice note %}}
-Base url `https://omega-stream.site/company` this will be called from now as *`[base_url]`*
+Base url `https://omegastream.net/company` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
 ### Endpoint

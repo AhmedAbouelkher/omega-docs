@@ -7,7 +7,7 @@ draft: false
 Fetches the video full info with its UUID.
 
 {{% notice note %}}
-Base url `https://omega-stream.site/company` this will be called from now as *`[base_url]`*
+Base url `https://omegastream.net/company` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
 ### Endpoint

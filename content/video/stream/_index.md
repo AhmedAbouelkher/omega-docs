@@ -7,7 +7,7 @@ pre: "<b>4. </b>"
 ---
 
 {{% notice note %}}
-Base url `https://omega-stream.site/stream` this will be called from now as *`[base_url]`*
+Base url `https://omegastream.net/stream` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
 ### Endpoint
