@@ -13,7 +13,7 @@ Base url `https://omegastream.net/company` this will be called from now as *`[ba
 
 ### Endpoint
 ```url
-GET: [base_url]/client/webhooks/
+GET: [base_url]/client/webhooks
 ```
 
 ### Request Body
@@ -99,17 +99,17 @@ Available events are
 
 - `video.uploaded` ⚠️ Triggered when video is uploaded or ready to be pushed for processing.
 
-- `video.ready_for_processing` ⚠️ Triggered when video is pushed for processing and ready (but not yet processed).
+- `video.ready_for_processing` ❌ Triggered when video is pushed for processing and ready (but not yet processed).
 
-- `video.in_progress` ✅ Triggered when video is being processed right now.
+- `video.in_progress` ❌ Triggered when video is being processed right now.
 
-- `video.completed_processing` ⚠️ Triggered when video processing is complete. (but not yet confirmed to be working and with no confirmed success)
+- `video.completed_processing` ❌ Triggered when video processing is complete. (but not yet confirmed to be working and with no confirmed success)
 
-- `video.process_failed` ❌ Triggered when video processing failed.
+- `video.process_failed` ✅ Triggered when video processing failed.
 
-- `video.process_succeeded` ❌ Triggered when video processing succeeded.
+- `video.process_succeeded` ✅ Triggered when video processing succeeded.
 
-- `video.ready_to_watch` ⚠️ Triggered when video is ready to be watched right now.
+- `video.ready_to_watch` ❌ Triggered when video is ready to be watched right now.
 
 - `video.deleted` ✅ Triggered when the video is successfully deleted.
 
@@ -119,9 +119,13 @@ Available events are
 
  - ✅ Alive and kicking.
 
- - ⚠️ Only available for *stream copy* videos--videos which was downloaded from a url--FOR NOW.
+ - ⚠️ Only available for some features. (send to Omega support to learn more)
 
  - ❌ Doesn't have any effect right now.
+
+{{% notice tip %}}
+As of now (*2022-10-01*) you can use `video.process_succeeded` to indicate video process complete.
+{{% /notice %}}
 
 
 #### Full Event Body

@@ -58,13 +58,13 @@ weight: 1
 #### Video Status
 videos status is an enum with values:
 
-- `uploaded` 
+- `uploaded` video has been uploaded to our systems and ready to be processed.
 
-- `in-progress` 
+- `in-progress` video processing is triggered and awaiting the worker.
 
-- `process-failed` 
+- `process-failed` video process failed for some reason. (see [Video Failure](#video-failure))
 
-- `process-completed` 
+- `process-completed` video is ready to be watched. (see [Playback](#playback))
 
 {{% notice tip %}}
 Video status are very important when receiving [webhooks events](/video/webhooks/create_endpoint).
@@ -96,3 +96,15 @@ To learn more on how to stream video from **HLS** or **DAHS** links, take a look
 |-----------|------------|------------------------------------|----------|
 | width        | integer   | original video width in px.    | NO       |
 | height        | integer   | original video height in px.    | NO       |
+
+
+### Video Failure
+Video failure is indicated by status `process-failed` and failure reason can be found in `meta.failure`.
+
+Example:
+```json
+{
+    "downloaded_from" : "https://example.com/dashboard/download/storage/VEc5dVp5QndiMnhzSUhKbGNYVmxjM1J6SUhkcGRHZ2dUR0Z5WVhabGJDNXRjRFE9",
+    "failure" : "AccessDenied: Access Denied\n\tstatus code: 403, request id: 588945944CC48625:B, host id: btRoYPJTQm8NRBFi3Pc07IkikXlsK7QHfC8XuCI9kN1T5DtP26rg7PIkLgU5GLaeeJ80rjoBgx1K"
+}
+```

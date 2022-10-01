@@ -2,6 +2,7 @@
 title: "Upload via link"
 date: 2022-09-15T18:06:20+02:00
 draft: false
+weight: 1
 ---
 
 If you have videos stored in a cloud storage bucket, you can simply pass a HTTP link for the file. Stream will fetch the file and make it available for streaming.
@@ -29,11 +30,9 @@ POST: [base_url]/client/video/stream/copy
 ```
 | Key     | Required | Description                                                                    | Example                                                                       |
 |---------|----------|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| title   | false    | this is the video title.                                                       | video                                                                         |
+| title   | **true**    | this is the video title.                                                       | video                                                                         |
 | url     | **true** | video direct url                                                               | https://storage.googleapis.com/zaid-test/Watermarks%20Demo/cf-ad-original.mp4 |
 | headers | false    | those are the video headers which will be sent with the *url* to request video | json formatted, ex: `{"user-id":"id-1234"}`|
-
-
 
 ### Headers
 | Key           | Value              | Details                                                 |

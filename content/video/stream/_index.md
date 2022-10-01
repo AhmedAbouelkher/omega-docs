@@ -15,10 +15,11 @@ Base url `https://omegastream.net/stream` this will be called from now as *`[bas
 GET: [base_url]/company/{S3_PATH}
 ```
 
-- **S3_PATH** represents the video s3 url without ***s3://*** ex: `processed-enterprise-media/bc233331/video/cbd7774c-aea7-4d8a-83d5-d0d51002dd53/playlist.m3u8`.
+- **S3_PATH** represents the video s3 url without `s3://`
+    
+    Ex: `processed-enterprise-media/bc233331/video/cbd7774c-aea7-4d8a-83d5-d0d51002dd53/playlist.m3u8`.
 
 ### Headers
 | Key           | Value              | Details                                                 |
 |---------------|--------------------|---------------------------------------------------------|
 | Authorization | Bearer *{{api_key}}* | api key is very important here to authorize your request. |
-| Content-Type  | application/json   |                                                         |
