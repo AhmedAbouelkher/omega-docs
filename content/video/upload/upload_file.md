@@ -1,7 +1,7 @@
 ---
 title: "Upload a video file"
 date: 2022-10-01T21:19:42+02:00
-draft: true
+draft: false
 weight: 2
 ---
 
@@ -44,7 +44,9 @@ Instead, the `stream-media-id` HTTP header in the response should be used to ret
 
 For example, a request made to `https://omegastream.net/company/client/video/stream` with the TUS protocol, the response will contain a HTTP header like this:
 
-    stream-media-id: 3b1d4369-3b85-4c8e-bc91-83e519ee6ab3
+```
+stream-media-id: "3b1d4369-3b85-4c8e-bc91-83e519ee6ab3"
+```
 
 ### Command-line example
 
@@ -62,7 +64,7 @@ In the beginning of the response from tus, you’ll see the endpoint for getting
 
 ```bash
 INFO Creating file endpoint
-INFO Created: https://api.Omega.com/client/v4/accounts/d467d4f0fcbcd9791b613bc3a9599cdc/stream/dd5d531a12de0c724bd1275a3b2bc9c6
+INFO Created: https://omegastream.net/company/client/video/stream3b1d4369-3b85-4c8e-bc91-83e519ee6ab3
 ...
 ```
 
@@ -81,8 +83,6 @@ import (
 )
 
 func main() {
-	accountID := "ACCOUNT ID"
-
 	f, err := os.Open("videofile.mp4")
 
 	if err != nil {
@@ -96,20 +96,16 @@ func main() {
 
 	config := &tus.Config{
 		ChunkSize:           50 * 1024 * 1024, // Required a minimum chunk size of 5MB, here we use 50MB.
-		Resume:              false,
-		OverridePatchMethod: false,
-		Store:               nil,
 		Header:              headers,
-		HttpClient:          nil,
 	}
 
-	client, _ := tus.NewClient("https://api.Omega.com/client/v4/accounts/"+ accountID +"/stream", config)
+	client, _ := tus.NewClient("https://omegastream.net/company/client/video/stream", config)
 
 	upload, _ := tus.NewUploadFromFile(f)
 
 	uploader, _ := client.CreateUpload(upload)
 
-	uploader.Upload()
+	_ := uploader.Upload()
 }
 ```
 
@@ -158,8 +154,6 @@ var options = {
   metadata: {
     filename: 'test.mp4',
     filetype: 'video/mp4',
-    defaulttimestamppct: 0.5,
-    watermark: '<WATERMARK_UID>',
   },
   uploadSize: size,
   onError: function (error) {
@@ -178,7 +172,7 @@ var options = {
       if (mediaIdHeader) {
         mediaId = mediaIdHeader;
       }
-      resolve();
+      return resolve();
     });
   },
 };

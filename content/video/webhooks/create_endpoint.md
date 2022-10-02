@@ -35,7 +35,7 @@ GET: [base_url]/client/webhooks
 They are the triggers on which you will be receiving a new event with a structure of the following
 ```json
 {
-    "_id" : "630fac88bd5bb64cf8b24b99",
+    "id" : "630fac88bd5bb64cf8b24b99",
     "coid" : "omega-cop-OyJrgi5-fx",
     "api_version" : "v1",
     "created" : 1661971592,
@@ -57,7 +57,7 @@ They are the triggers on which you will be receiving a new event with a structur
 `response` field is the response we got from your endpoint.
 {{% /notice %}}
 
-{{% expand "Event data will be the full video data for now." %}}
+Event data will be the full video data for now
 ```json
 {
     "id": "6322f996601b871c57d875a5",
@@ -91,11 +91,9 @@ They are the triggers on which you will be receiving a new event with a structur
     }
 }
 ```
+To see the [full body](/video/webhooks/events)
 
-To see the [full body](#full-event-body)
-{{% /expand%}}
-
-Available events are
+#### Available events are
 
 - `video.uploaded` ⚠️ Triggered when video is uploaded or ready to be pushed for processing.
 
@@ -123,54 +121,12 @@ Available events are
 
  - ❌ Doesn't have any effect right now.
 
-{{% notice tip %}}
+{{% notice note %}}
 As of now (*2022-10-01*) you can use `video.process_succeeded` to indicate video process complete.
 {{% /notice %}}
 
-
-#### Full Event Body
-```json
-{
-    "_id" : "630fac88bd5bb64cf8b24b99",
-    "coid" : "omega-cop-OyJrgi5-fx",
-    "api_version" : "v1",
-    "created" : 1661971592,
-    "type" : "video.process_failed",
-    "data" : {
-        "video" : {
-            "_id" : "630fac1fbd5bb64cf8b24b83",
-            "created_at" : "2022-08-31T18:44:47.964Z",
-            "updated_at" : "2022-08-31T18:46:29.828Z",
-            "title" : "video title",
-            "uuid" : "64673d31-28ad-4a2e-a43a-772774998a8c",
-            "coid" : "omega-cop-OyJrgi5-fx",
-            "status" : "process-failed",
-            "entity_tag" : null,
-            "playback" : null,
-            "input" : null,
-            "duration" : null,
-            "size" : null,
-            "ready_to_stream" : false,
-            "thumbnail" : null,
-            "thumbnail_timestamp_pct" : null,
-            "meta" : {
-                "downloaded_from" : "http://localhost:6060/countdown-audio.mp4",
-                "failure" : "nats: invalid connection"
-            }
-        }
-    },
-    "endpoint_id" : "6307b4d6570090479813a762",
-    "response" : {
-        "status_code" : 200,
-        "status" : "200 OK",
-        "body" : "webhook received\n",
-        "message" : "webhook event with type video.process_failed succeeded"
-    }
-}
-```
-
-{{% notice warning %}}
-There is no api endpoint right now to get all the events or a specific event with an id.
+{{% notice tip %}}
+To View endpoint events and each event details go to [Events](/video/webhooks/events)
 {{% /notice %}}
 
 ### Response
@@ -196,5 +152,5 @@ Status code: `OK 200`
 }
 ```
 {{% notice tip %}}
-You can learn more about **active** field from [here](/video/webhooks/hooks/#update-status)
+You can learn more about **active** field from [here](/video/webhooks/managment/#update-status)
 {{% /notice %}}
