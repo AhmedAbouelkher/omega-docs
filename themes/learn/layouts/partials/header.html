@@ -8,6 +8,27 @@
     {{ partial "favicon.html" . }}
     <title>{{ .Title }} {{ default "-" .Site.Params.titleSeparator }} {{ .Site.Title }}</title>
 
+    <!-- Site Meta -->
+    <meta name="description" content="{{ .Site.Params.Description }}">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="{{ .Site.Title }}">
+    <meta itemprop="description" content="{{ .Site.Params.Description }}">
+    <meta itemprop="image" content="/images/logo.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://docs.omegastream.net">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:description" content="{{ .Site.Params.Description }}">
+    <meta property="og:image" content="/images/logo.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Site.Title }}">
+    <meta name="twitter:description" content="{{ .Site.Params.Description }}">
+    <meta name="twitter:image" content="/images/logo.png">
+
     {{ $assetBusting := not .Site.Params.disableAssetsBusting }}
     <link href="{{"css/nucleus.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/fontawesome-all.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">

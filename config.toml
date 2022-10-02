@@ -1,7 +1,9 @@
 baseURL = 'https://docs.omega-stream.site/'
 languageCode = 'en-us'
-title = 'Omega Docs'
+title = 'Omega Stream Docs'
+copyright = '2022 Omega Stream'
 theme = 'learn'
 
 [params]
   themeVariant = "cust"
+  description = "Using Omega Stream Docs, you can find the latest Omega documentation for our enterprise API with examples and more than one language."
