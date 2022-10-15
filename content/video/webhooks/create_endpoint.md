@@ -110,15 +110,17 @@ To see the [full body](/video/webhooks/events)
 
 - `video.ready_to_watch` ❌ Triggered when video is ready to be watched right now.
 
-- `video.deleted` ❌ Triggered when the video is successfully deleted.
+- `video.deleted` ⚠️ Triggered when the video is successfully deleted.
 
-- `video.failed_to_delete` ❌ Triggered when the video deleted failed.
+- `video.failed_to_delete` ⚠️ Triggered when the video deleted failed.
+
+- `video.deletion_reverted` ⚠️ Triggered when the video deletion is reverted.
 
 **Keys:**
 
  - ✅ Alive and kicking.
 
- - ⚠️ Only available for some features. (send to Omega support to learn more)
+ - ⚠️ Only available for some features. (send to **Omega** support to learn more)
 
  - ❌ Doesn't have any effect right now.
 

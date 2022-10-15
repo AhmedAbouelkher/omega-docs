@@ -49,6 +49,10 @@ POST: [base_url]/client/video/revert_deletion/:uuid
 ```
 - `:uuid`: video's uuid.
 
+### Url Query 
+
+- `status`: video status. for [more](/video/managment/video_model#video-status).
+
 ### Headers
 | Key           | Value              | Details                                                 |
 |---------------|--------------------|---------------------------------------------------------|

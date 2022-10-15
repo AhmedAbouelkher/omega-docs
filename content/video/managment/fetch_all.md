@@ -1,19 +1,23 @@
 ---
 title: "Fetch all"
 date: 2022-09-15T18:03:51+02:00
-draft: true
+draft: false
 ---
-
-Fetches all the videos uploaded by the company in a sorted order (newest is **up**), with no pagination.
 
 {{% notice note %}}
 Base url `https://omegastream.net/company` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
+Fetches all the videos uploaded by the company in a sorted order (newest is **up**), with no pagination.
+
 ### Endpoint
 ```url
 GET: [base_url]/client/video/all
 ```
+
+### Url Query 
+
+- `status`: video status. for [more](/video/managment/video_model#video-status).
 
 ### Headers
 | Key           | Value              | Details                                                 |
@@ -91,3 +95,7 @@ GET: [base_url]/client/video/all
     }
 ]
 ```
+
+{{% notice tip %}}
+All fetched videos from this endpoint are not deleted. to get *ONLY* the deleted video [see](/video/managment/delete)
+{{% /notice %}}
