@@ -88,6 +88,7 @@ GET: [base_url]/client/webhooks/:id/events/:eid
             "id": "6322f996601b871c57d875a5",
             "created_at": "2022-09-15T10:08:22.972Z",
             "updated_at": "2022-09-15T10:14:07.324Z",
+            "deleted_at": null,
             "title": "Sintel",
             "uuid": "a0dc8dbf-3126-4805-89a1-662a33331f93",
             "coid": "omega-cop-KoNef9DB5i",

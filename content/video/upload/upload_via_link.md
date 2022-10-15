@@ -49,6 +49,7 @@ status code: `OK 200`
     "id": "6322ffb8601b871c57d875a9",
     "created_at": "2022-09-15T10:34:32.948100006Z",
     "updated_at": "2022-09-15T10:34:32.948100327Z",
+    "deleted_at": null,
     "title": "video",
     "uuid": "d13752eb-4341-48fe-9384-56bcd26d3de5",
     "coid": "omega-cop-KoNef9DB5i",

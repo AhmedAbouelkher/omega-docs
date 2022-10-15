@@ -10,6 +10,7 @@ weight: 1
     "id": "6322f9ad601b871c57d875a6",
     "created_at": "2022-09-15T10:08:45.712Z",
     "updated_at": "2022-09-15T10:14:02.645Z",
+    "deleted_at": null,
     "title": "TearsOfSteel",
     "uuid": "86a7f8bd-a365-4070-94b6-7fd179838ecd",
     "coid": "omega-cop-KoNef9DB5i",

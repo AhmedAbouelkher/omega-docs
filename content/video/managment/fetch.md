@@ -2,6 +2,7 @@
 title: "Fetch video"
 date: 2022-09-15T18:04:05+02:00
 draft: false
+weight: 2
 ---
 
 Fetches the video full info with its UUID.
@@ -29,6 +30,7 @@ GET: [base_url]/client/video/:uuid
     "id": "6322f996601b871c57d875a5",
     "created_at": "2022-09-15T10:08:22.972Z",
     "updated_at": "2022-09-15T10:14:07.324Z",
+    "deleted_at": null,
     "title": "Sintel",
     "uuid": "a0dc8dbf-3126-4805-89a1-662a33331f93",
     "coid": "omega-cop-KoNef9DB5i",

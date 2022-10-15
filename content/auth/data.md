@@ -28,6 +28,7 @@ GET: [base_url]/client/data
     "id": "6318b6badf1e5679e5ce6bb4",
     "created_at": "2022-09-07T15:20:26.78Z",
     "updated_at": "2022-09-07T15:20:26.78Z",
+    "deleted_at": null,
     "ocid": "omega-cop-KoNef9DB5i",
     "title": "kain edu",
     "email": "kain@omega.com",
