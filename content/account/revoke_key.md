@@ -12,7 +12,7 @@ Base url `https://omegastream.net/company` this will be called from now as *`[ba
 
 ### Endpoint
 ```url
-POST: [base_url]/client/revoke-api-key
+POST: [base_url]/client/account/revoke_api_key
 ```
 
 ### Headers

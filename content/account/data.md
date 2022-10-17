@@ -12,7 +12,7 @@ From here you can fetch your basic company info using your api key.
 
 ### Endpoint
 ```url
-GET: [base_url]/client/data
+GET: [base_url]/client/account/data
 ```
 
 ### Headers
