@@ -17,9 +17,11 @@ GET: [base_url]/company/{S3_PATH}
 
 - **S3_PATH** represents the video s3 url without `s3://`
     
-Example:
+#### Example:
 
-`s3://processed-enterprise-media/bc233331/video/cbd7774c-aea7-4d8a-83d5-d0d51002dd53/playlist.m3u8` will be `https://omegastream.net/stream/companyprocessed-enterprise-media/bc233331/video/cbd7774c-aea7-4d8a-83d5-d0d51002dd53/playlist.m3u8`
+`s3://processed-enterprise-media/bc233331/video/cbd7774c-aea7-4d8a-83d5-d0d51002dd53/playlist.m3u8` 
+will be
+`https://omegastream.net/stream/company/processed-enterprise-media/bc233331/video/cbd7774c-aea7-4d8a-83d5-d0d51002dd53/playlist.m3u8`
 
 ### Headers
 | Key           | Value              | Details                                                 |
