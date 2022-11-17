@@ -8,7 +8,7 @@ weight: 3
 ## Delete video by uuid
 
 {{% notice note %}}
-Base url `https://omegastream.net/company` this will be called from now as *`[base_url]`*
+Base url `https://api.omegastream.net/company` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
 Delete the givin video using its UUID, but the video should be completed processing or failed for more than **4 hours**.

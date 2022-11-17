@@ -10,7 +10,7 @@ If you have videos stored in a cloud storage bucket, you can simply pass a HTTP 
 By using [webhooks](/video/webhooks/) you can receive a notification when the video is ready to be played or if it errors.
 
 {{% notice note %}}
-Base url `https://omegastream.net/company` this will be called from now as *`[base_url]`*
+Base url `https://api.omegastream.net/company` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
 ## Step 1: Make an API call with the link

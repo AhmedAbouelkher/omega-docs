@@ -6,7 +6,7 @@ weight: 5
 ---
 
 {{% notice note %}}
-Base url `https://omegastream.net/company` this will be called from now as *`[base_url]`*
+Base url `https://api.omegastream.net/company` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
 ## List webhook endpoint event

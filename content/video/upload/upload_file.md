@@ -6,7 +6,7 @@ weight: 2
 ---
 
 {{% notice note %}}
-Base url `https://omegastream.net/company` this will be called from now as *`[base_url]`*
+Base url `https://api.omegastream.net/company` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
 ## Resumable uploads with tus (for large files)
@@ -42,7 +42,7 @@ When an initial TUS request is made, Stream responds with a URL in the location 
 
 Instead, the `stream-media-id` HTTP header in the response should be used to retrieve the video ID.
 
-For example, a request made to `https://omegastream.net/company/client/video/stream` with the TUS protocol, the response will contain a HTTP header like this:
+For example, a request made to `https://api.omegastream.net/company/client/video/stream` with the TUS protocol, the response will contain a HTTP header like this:
 
 ```
 stream-media-id: "3b1d4369-3b85-4c8e-bc91-83e519ee6ab3"
@@ -57,14 +57,14 @@ pip install -U tus.py
 ```
 
 ```bash
-tus-upload --chunk-size 52428800 --header Authorization "Bearer <API_KEY>" <PATH_TO_VIDEO> https://omegastream.net/company/client/video/stream
+tus-upload --chunk-size 52428800 --header Authorization "Bearer <API_KEY>" <PATH_TO_VIDEO> https://api.omegastream.net/company/client/video/stream
 ```
 
 In the beginning of the response from tus, you’ll see the endpoint for getting information about your newly uploaded video.
 
 ```bash
 INFO Creating file endpoint
-INFO Created: https://omegastream.net/company/client/video/stream3b1d4369-3b85-4c8e-bc91-83e519ee6ab3
+INFO Created: https://api.omegastream.net/company/client/video/stream3b1d4369-3b85-4c8e-bc91-83e519ee6ab3
 ...
 ```
 
@@ -99,7 +99,7 @@ func main() {
 		Header:              headers,
 	}
 
-	client, _ := tus.NewClient("https://omegastream.net/company/client/video/stream", config)
+	client, _ := tus.NewClient("https://api.omegastream.net/company/client/video/stream", config)
 
 	upload, _ := tus.NewUploadFromFile(f)
 
@@ -145,7 +145,7 @@ var size = fs.statSync(path).size;
 var mediaId = '';
 
 var options = {
-  endpoint: 'https://omegastream.net/company/client/video/stream',
+  endpoint: 'https://api.omegastream.net/company/client/video/stream',
   headers: {
     Authorization: 'Bearer <API_KEY>',
   },

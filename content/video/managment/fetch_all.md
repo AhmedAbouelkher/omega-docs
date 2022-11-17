@@ -5,7 +5,7 @@ draft: false
 ---
 
 {{% notice note %}}
-Base url `https://omegastream.net/company` this will be called from now as *`[base_url]`*
+Base url `https://api.omegastream.net/company` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
 Fetches all the videos uploaded by the company in a sorted order (newest is **up**), with no pagination.

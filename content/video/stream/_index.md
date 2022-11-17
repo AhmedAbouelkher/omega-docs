@@ -7,7 +7,7 @@ pre: "<b>4. </b>"
 ---
 
 {{% notice note %}}
-Base url `https://omegastream.net/stream` this will be called from now as *`[base_url]`*
+Base url `https://api.omegastream.net/stream` this will be called from now as *`[base_url]`*
 {{% /notice %}}
 
 ### Endpoint
@@ -21,7 +21,7 @@ GET: [base_url]/company/{S3_PATH}
 
 `s3://processed-enterprise-media/bc233331/video/cbd7774c-aea7-4d8a-83d5-d0d51002dd53/playlist.m3u8` 
 will be
-`https://omegastream.net/stream/company/processed-enterprise-media/bc233331/video/cbd7774c-aea7-4d8a-83d5-d0d51002dd53/playlist.m3u8`
+`https://api.omegastream.net/stream/company/processed-enterprise-media/bc233331/video/cbd7774c-aea7-4d8a-83d5-d0d51002dd53/playlist.m3u8`
 
 ### Headers
 | Key           | Value              | Details                                                 |
