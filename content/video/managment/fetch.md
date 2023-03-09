@@ -27,35 +27,46 @@ GET: [base_url]/client/video/:uuid
 ### Response
 ```json
 {
-    "id": "6322f996601b871c57d875a5",
-    "created_at": "2022-09-15T10:08:22.972Z",
-    "updated_at": "2022-09-15T10:14:07.324Z",
+    "id": "63fcdbd82eec9b89aa5bfdf3",
+    "created_at": "2023-02-27T16:35:36.008Z",
+    "updated_at": "2023-02-27T16:55:26.156Z",
     "deleted_at": null,
-    "title": "Sintel",
-    "uuid": "a0dc8dbf-3126-4805-89a1-662a33331f93",
-    "coid": "omega-cop-KoNef9DB5i",
+    "title": "WeAreGoingOnBullrun",
+    "uuid": "17008615-2fd2-46f3-bb85-2ad4ca0466e1",
+    "coid": "omega-cop-f60d8a4c",
     "status": "process-completed",
-    "entity_tag": "ca29e57cc6e7f9d278a8c4fe4934c53c-37",
+    "privacy": "private",
     "playback": {
-        "hls": "s3://processed-enterprise-media/93db1c64/video/a0dc8dbf-3126-4805-89a1-662a33331f93/playlist.m3u8",
-        "dash": null
+        "hls": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/playlist.m3u8",
+        "dash": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/playlist.mpd",
+        "audio": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/audio.aac",
+        "r_1080p": null,
+        "r_720p": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/720p.mp4",
+        "r_360p": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/360p.mp4",
+        "r_480p": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/480p.mp4",
+        "r_240p": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/240p.mp4"
     },
     "input": {
         "width": 1280,
-        "height": 546
+        "height": 720
     },
-    "duration": 888,
-    "size": 190612452,
+    "duration": 47,
+    "size": 59039744,
     "ready_to_stream": true,
-    "thumbnail": "s3://processed-enterprise-media/93db1c64/video/a0dc8dbf-3126-4805-89a1-662a33331f93/thumbnail.png",
+    "thumbnail": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/thumbnail.png",
     "thumbnail_timestamp_pct": null,
     "storage": {
-        "bucket": "processed-enterprise-media",
-        "raw_bucket": "raw-enterprise-media",
+        "bucket": "dev-processed-media",
+        "raw_bucket": "raw-client-media",
+        "provider": "omega",
+        "source": {
+            "key": "raw-client-media/69e4ed89/17008615-2fd2-46f3-bb85-2ad4ca0466e1.mp4",
+            "size": 13183260
+        },
         "meta": null
     },
     "meta": {
-        "downloaded_from": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+        "downloaded_from": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4"
     }
 }
 ```

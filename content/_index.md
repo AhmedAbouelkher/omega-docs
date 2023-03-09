@@ -6,7 +6,7 @@ chapter: true
 weight: 5
 ---
 
-### Welcome to **Omega Stream** api docs
+### Welcome to **Omegastream** api docs
 
 Here you can find the latest documentation for our enterprise api with examples and more than one language.
 

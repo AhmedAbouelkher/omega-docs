@@ -15,16 +15,16 @@ Base url `https://api.omegastream.net/company` this will be called from now as *
 
 > tus is a protocol based on HTTP for resumable file uploads. Resumable means that an upload can be interrupted at any moment and can be resumed without re-uploading the previous data again. An interruption may happen willingly, if the user wants to pause, or by accident in case of an network issue or server outage.
 
-[tus protocol](https://tus.io) is the recommended method for uploading large files to Omega Stream from a computer. Popular programming languages have [tus client implementations](https://tus.io/implementations.html).
+[tus protocol](https://tus.io) is the recommended method for uploading large files to Omegastream from a computer. Popular programming languages have [tus client implementations](https://tus.io/implementations.html).
 
 {{% notice note %}}
-Important: Omega Stream requires a minimum chunk size of 5,242,880 bytes when using TUS, unless the entire file is less than this amount.
+Important: Omegastream requires a minimum chunk size of 5,242,880 bytes when using TUS, unless the entire file is less than this amount.
 We recommend increasing the chunk size to 52,428,800 bytes for better performance when the client connection is expected to be reliable.
 Maximum chunk size can be 209,715,200 bytes.
 {{% /notice %}}
 
 {{% notice note %}}
-Important: Omega Stream requires a chunk size divisible by 256KiB (256x1024 bytes). Please round your desired chunk size to the nearest multiple of 256KiB.
+Important: Omegastream requires a chunk size divisible by 256KiB (256x1024 bytes). Please round your desired chunk size to the nearest multiple of 256KiB.
 The final chunk of an upload or uploads that fit within a single chunk are exempt from this requirement.
 {{% /notice %}}
 
