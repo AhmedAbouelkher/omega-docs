@@ -1,12 +1,12 @@
 ---
-title: "Upload a video file"
-date: 2022-10-01T21:19:42+02:00
+title: "Upload Video"
+date: 2023-06-22T20:52:43+03:00
 draft: false
-weight: 2
 ---
 
+
 {{% notice note %}}
-Base url `https://api.omegastream.net/company` this will be called from now as *`[base_url]`*
+Base url `https://api.omegastream.net/company/client/video/stream` this will be called from now as *`{base_url}`*
 {{% /notice %}}
 
 ## Resumable uploads with tus (for large files)

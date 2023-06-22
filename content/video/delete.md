@@ -8,20 +8,16 @@ weight: 3
 ## Delete video by uuid
 
 {{% notice note %}}
-Base url `https://api.omegastream.net/company` this will be called from now as *`[base_url]`*
+Base url `https://api.omegastream.net/company/company/client/video` this will be called from now as *`{base_url}`*
 {{% /notice %}}
 
 Delete the givin video using its UUID, but the video should be completed processing or failed for more than **4 hours**.
 
 To fetch **ONLY** all deleted videos use [Fetch Deleted](#delete-video-by-uuid).
 
-{{% notice warning %}}
-When the video is deleted it can't be streamed or watched. If you need to revert deletion, head to [Revert Deletion](#revert-video-deletion-by-uuid)
-{{% /notice %}}
-
 ### Endpoint
 ```url
-DELETE: [base_url]/client/video/:uuid
+DELETE: {base_url}/:uuid
 ```
 - `:uuid`: video's uuid.
 
@@ -31,6 +27,9 @@ DELETE: [base_url]/client/video/:uuid
 | Authorization | Bearer *{{api_key}}* | api key is very important here to authorize your request. |
 | Content-Type  | application/json   |                                                         |
 
+{{% notice tip %}}
+When the video is deleted it can't be streamed or watched. If you need to revert deletion, head to [Revert Deletion](#revert-video-deletion-by-uuid)
+{{% /notice %}}
 
 ### Response
 ```json
@@ -45,7 +44,7 @@ DELETE: [base_url]/client/video/:uuid
 
 ### Endpoint
 ```url
-POST: [base_url]/client/video/revert_deletion/:uuid
+POST: {base_url}/revert_deletion/:uuid
 ```
 - `:uuid`: video's uuid.
 
