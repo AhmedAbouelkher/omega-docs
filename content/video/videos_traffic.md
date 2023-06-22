@@ -11,6 +11,7 @@ Base url `https://api.omegastream.net/company/client/video` this will be called 
 You can get the combined traffic for your videos starting from the subscription period start date till now.
 
 ### Endpoint
+
 ```url
 POST: {base_url}/traffic
 ```
@@ -26,7 +27,10 @@ POST: {base_url}/traffic
 }
 ```
 
+- ```uuids```: array of video's uuids. min length is 1 and max length is 30.
+
 ### Headers
+
 | Key           | Value              | Details                                                 |
 |---------------|--------------------|---------------------------------------------------------|
 | Authorization | Bearer *{{api_key}}* | api key is very important here to authorize your request. |
@@ -34,6 +38,7 @@ POST: {base_url}/traffic
 
 
 ### Response
+
 Status Code: `200`
 
 ```json

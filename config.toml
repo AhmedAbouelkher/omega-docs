@@ -6,4 +6,5 @@ theme = 'learn'
 
 [params]
   themeVariant = "cust"
-  description = "Using Omegastream Docs, you can find the latest Omega documentation for our enterprise API with examples and more than one language."
+  description = "This is the official documentation for Omegastream api, here you will find all the information you need to integrate with Omega api.
+"

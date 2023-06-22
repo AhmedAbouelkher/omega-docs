@@ -84,6 +84,7 @@ New Updates came to the video model as of 2023-06-22.
 | meta  | map[string]string  | video metadata.    | NO      |
 
 #### Video Status
+
 videos status is an enum with values:
 
 - `uploaded` video has been uploaded to our systems and ready to be processed.
@@ -158,9 +159,11 @@ This field has been **deprecated**, please use [Playback V2](#playback-v2) inste
 
 
 ### Video Failure
+
 Video failure is indicated by status `process-failed` and failure reason can be found in `meta.failure`.
 
 Example:
+
 ```json
 {
     "downloaded_from" : "https://example.com/dashboard/download/storage/VEc5dVp5QndiMnhzSUhKbGNYVmxjM1J6SUhkcGRHZ2dUR0Z5WVhabGJDNXRjRFE9",
@@ -179,12 +182,15 @@ Base url `https://api.omegastream.net/company/client/video` this will be called 
 {{% /notice %}}
 
 ### Endpoint
+
 ```url
 GET: {base_url}/:uuid
 ```
+
 - **:uuid**: video's uuid. (ex: `a0dc8dbf-3126-4805-89a1-662a33331f93`)
 
 ### Headers
+
 | Key           | Value              | Details                                                 |
 |---------------|--------------------|---------------------------------------------------------|
 | Authorization | Bearer *{{api_key}}* | api key is very important here to authorize your request. |
@@ -192,7 +198,9 @@ GET: {base_url}/:uuid
 
 
 ### Response
+
 Status Code: `200`
+
 ```json
 {
     "id": "63fcdbd82eec9b89aa5bfdf3",
