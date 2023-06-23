@@ -1,10 +1,9 @@
-baseURL = 'https://docs.omega-stream.site/'
+baseURL = 'https://docs.omegastream.net/'
 languageCode = 'en-us'
 title = 'Omegastream Docs'
-copyright = '2022 Omegastream'
+copyright = '2023 Omegastream'
 theme = 'learn'
 
 [params]
   themeVariant = "cust"
-  description = "This is the official documentation for Omegastream api, here you will find all the information you need to integrate with Omega api.
-"
+  description = "This is the official documentation for Omegastream api, here you will find all the information you need to integrate with Omega api."

@@ -19,5 +19,10 @@ To learn more about our plans and our features head to [Omegastream](https://www
 
 To get started with **Omegastream** api you need to create an account and get your api key, you can do that from [here](https://dash.omegastream.net/).
 
+After signing up to your preferred plan, you can create your API key from the [Developer](https://dash.omegastream.net/developer) page.
+
+
+
+## Our Docs
 
 {{% children  %}}
