@@ -44,7 +44,7 @@ Status Code: `200`
 }
 ```
 
-{{% notice note %}}
+{{% notice tip %}}
 If you have multiple videos to delete at once you can use [Bulk Delete](#bulk-delete-videos-by-uuids).
 {{% /notice %}}
 
@@ -86,12 +86,12 @@ Status Code: `200`
 
 ---
 
-Bulk delete videos by uuids
+## Bulk delete videos by uuids
 
 ### Endpoint
 
 ```url
-DELETE: {base_url}/bulk_delete
+DELETE: {base_url}/delete_videos
 ```
 
 ### Request Body
