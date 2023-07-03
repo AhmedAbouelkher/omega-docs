@@ -6,7 +6,7 @@ weight: 3
 ---
 
 {{% notice note %}}
-Base url `https://api.omegastream.net/company/company/client/video` this will be called from now as *`{base_url}`*
+Base url `https://api.omegastream.net/company/client/video` this will be called from now as *`{base_url}`*
 {{% /notice %}}
 
 ## Delete video by uuid

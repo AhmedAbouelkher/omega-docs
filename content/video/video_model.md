@@ -31,14 +31,14 @@ New Updates came to the video model as of 2023-06-22.
         "r_240p": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/240p.mp4"
     },
     "playback_v2": {
-        "hls": "https://dev.api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/playlist.m3u8?s=AUTH_SIGNATURE",
-        "dash": "https://dev.api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/playlist.mpd?s=AUTH_SIGNATURE",
-        "audio": "https://dev.api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/audio.aac?s=AUTH_SIGNATURE",
+        "hls": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/playlist.m3u8?s=AUTH_SIGNATURE",
+        "dash": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/playlist.mpd?s=AUTH_SIGNATURE",
+        "audio": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/audio.aac?s=AUTH_SIGNATURE",
         "r_1080p": null,
-        "r_720p": "https://dev.api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/720p.mp4?s=AUTH_SIGNATURE",
-        "r_360p": "https://dev.api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/360p.mp4?s=AUTH_SIGNATURE",
-        "r_480p": "https://dev.api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/480p.mp4?s=AUTH_SIGNATURE",
-        "r_240p": "https://dev.api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/240p.mp4?s=AUTH_SIGNATURE"
+        "r_720p": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/720p.mp4?s=AUTH_SIGNATURE",
+        "r_360p": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/360p.mp4?s=AUTH_SIGNATURE",
+        "r_480p": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/480p.mp4?s=AUTH_SIGNATURE",
+        "r_240p": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/240p.mp4?s=AUTH_SIGNATURE"
     },
     "input": {
         "width": 1280,
@@ -114,6 +114,7 @@ This the exact same as [Playback](#playback) but with the following changes:
 |-----------|------------|------------------------------------|----------|
 | hls        | string   | direct video streaming url    | YES       |
 | dash        | string   | direct video streaming url    | YES       |
+| audio        | string   | direct audio streaming url (AAC)    | YES       |
 |   r_1080p      | string   | direct link for 1080p resolution     | YES       |
 |   r_720p      | string   | direct link for 720p resolution     | YES       |
 |   r_480p      | string   | direct link for 480p resolution     | YES       |
@@ -136,6 +137,7 @@ This field has been **deprecated**, please use [Playback V2](#playback-v2) inste
 |-----------|------------|------------------------------------|----------|
 | hls        | string   | video hls streaming url    | YES       |
 | dash        | string   | video dash streaming url    | YES       |
+| audio        | string   | direct audio streaming url (AAC)    | YES       |
 |   r_1080p      | string   | direct link for 1080p resolution     | YES       |
 |   r_720p      | string   | direct link for 720p resolution     | YES       |
 |   r_480p      | string   | direct link for 480p resolution     | YES       |
