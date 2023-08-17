@@ -1,30 +1,27 @@
 ---
-title: "Video Privacy"
-date: 2023-06-22T20:49:12+03:00
+title: "Revert Video Delete"
+date: 2023-08-17T16:19:04+03:00
 draft: false
 ---
 
-You can get the combined traffic for your videos starting from the subscription period start date till now.
+You can revert the deletion of the video using its UUID.
 
 {{% notice note %}}
 Base url `https://api.omegastream.net/company/client/video` this will be called from now as *`{base_url}`*
 {{% /notice %}}
 
+
 ### Endpoint
 
 ```url
-PUT: {base_url}/:uuid/privacy
+POST: {base_url}/revert_deletion/:uuid
 ```
 
-- **:uuid**: video's uuid. (ex: `a0dc8dbf-3126-4805-89a1-662a33331f93`)
+- `:uuid`: video's uuid.
 
-```json
-{
-    "privacy": "private"
-}
-```
+### Url Query 
 
-- Privacy can be `public` or `private`.
+- `status`: video status. for [more](/video/managment/video_model#video-status).
 
 ### Headers
 
@@ -32,6 +29,7 @@ PUT: {base_url}/:uuid/privacy
 |---------------|--------------------|---------------------------------------------------------|
 | Authorization | Bearer *{{api_key}}* | api key is very important here to authorize your request. |
 | Content-Type  | application/json   |                                                         |
+
 
 ### Response
 

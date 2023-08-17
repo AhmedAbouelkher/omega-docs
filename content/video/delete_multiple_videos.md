@@ -1,30 +1,35 @@
 ---
-title: "Video Privacy"
-date: 2023-06-22T20:49:12+03:00
+title: "Delete Multiple Videos"
+date: 2023-08-17T16:08:14+03:00
 draft: false
 ---
-
-You can get the combined traffic for your videos starting from the subscription period start date till now.
 
 {{% notice note %}}
 Base url `https://api.omegastream.net/company/client/video` this will be called from now as *`{base_url}`*
 {{% /notice %}}
 
+{{% notice tip %}}
+Incase you want to delete a single video, you should use [Delete Video](/video/delete_video) api instead.
+{{% /notice %}}
+
 ### Endpoint
 
 ```url
-PUT: {base_url}/:uuid/privacy
+DELETE: {base_url}/delete_videos
 ```
 
-- **:uuid**: video's uuid. (ex: `a0dc8dbf-3126-4805-89a1-662a33331f93`)
+### Request Body
 
 ```json
 {
-    "privacy": "private"
+    "uuids": [
+        "a0dc8dbf-3126-4805-89a1-662a33331f93"
+        "ec070291-f584-4ce0-af1a-58fbe46cb905"
+    ]
 }
 ```
 
-- Privacy can be `public` or `private`.
+- ```uuids```: array of video's uuids. min length is 1 and max length is 50.
 
 ### Headers
 
@@ -35,4 +40,14 @@ PUT: {base_url}/:uuid/privacy
 
 ### Response
 
-Status Code: `204` No Content
+Status Code: `200` OK
+
+```json
+{
+    "has_error": false,
+    "videos_count": 1,
+    "updated_count": 1,
+    "failed_count": 0,
+    "failed_videos": {}
+}
+```

@@ -6,4 +6,4 @@ theme = 'learn'
 
 [params]
   themeVariant = "cust"
-  description = "This is the official documentation for Omegastream api, here you will find all the information you need to integrate with Omega api."
+  description = "This is the official documentation for Omegastream api, here you will find all the information you need to integrate with Omegastream api."

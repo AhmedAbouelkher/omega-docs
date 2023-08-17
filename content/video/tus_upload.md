@@ -4,10 +4,16 @@ date: 2023-06-22T20:52:43+03:00
 draft: false
 ---
 
+{{% notice warning %}}
+Current TUS upload endpoint `https://api.omegastream.net/company/client/video/stream` is **deprecated** and will not receive future support.
+This implementation will be removed in **01/01/2024**.
+You can migrate to the [latest version V2](/tus_upload) which is more **secure** and **easier** to use.
+{{% /notice %}}
 
 {{% notice note %}}
 Base url `https://api.omegastream.net/company/client/video/stream` this will be called from now as *`{base_url}`*
 {{% /notice %}}
+
 
 ## Resumable uploads with tus (for large files)
 

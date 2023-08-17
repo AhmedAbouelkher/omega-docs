@@ -4,11 +4,11 @@ date: 2023-06-22T20:43:57+03:00
 draft: false
 ---
 
+You can get the combined traffic for your videos starting from the subscription period start date till now.
+
 {{% notice note %}}
 Base url `https://api.omegastream.net/company/client/video` this will be called from now as *`{base_url}`*
 {{% /notice %}}
-
-You can get the combined traffic for your videos starting from the subscription period start date till now.
 
 ### Endpoint
 
@@ -34,12 +34,12 @@ POST: {base_url}/traffic
 | Key           | Value              | Details                                                 |
 |---------------|--------------------|---------------------------------------------------------|
 | Authorization | Bearer *{{api_key}}* | api key is very important here to authorize your request. |
-| Content-Type  | application/json   |   
+| Content-Type  | application/json   |   |
 
 
 ### Response
 
-Status Code: `200`
+Status Code: `200` OK
 
 ```json
 {

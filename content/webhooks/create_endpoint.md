@@ -61,65 +61,6 @@ They are the triggers on which you will be receiving a new event with a structur
 `response` field is the response we got from your endpoint.
 {{% /notice %}}
 
-Event data will be the full video data for now
-```json
-{
-    "id": "63fcdbd82eec9b89aa5bfdf3",
-    "created_at": "2023-02-27T16:35:36.008Z",
-    "updated_at": "2023-02-27T16:55:26.156Z",
-    "deleted_at": null,
-    "title": "WeAreGoingOnBullrun",
-    "uuid": "17008615-2fd2-46f3-bb85-2ad4ca0466e1",
-    "coid": "omega-cop-f60d8a4c",
-    "status": "process-completed",
-    "privacy": "private",
-    "playback": {
-        "hls": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/playlist.m3u8",
-        "dash": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/playlist.mpd",
-        "audio": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/audio.aac",
-        "r_1080p": null,
-        "r_720p": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/720p.mp4",
-        "r_360p": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/360p.mp4",
-        "r_480p": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/480p.mp4",
-        "r_240p": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/240p.mp4"
-    },
-    "playback_v2": {
-        "hls": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/playlist.m3u8?s=AUTH_SIGNATURE",
-        "dash": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/playlist.mpd?s=AUTH_SIGNATURE",
-        "audio": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/audio.aac?s=AUTH_SIGNATURE",
-        "r_1080p": null,
-        "r_720p": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/720p.mp4?s=AUTH_SIGNATURE",
-        "r_360p": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/360p.mp4?s=AUTH_SIGNATURE",
-        "r_480p": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/480p.mp4?s=AUTH_SIGNATURE",
-        "r_240p": "https://api.omegastream.net/stream/company/dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/240p.mp4?s=AUTH_SIGNATURE"
-    },
-    "input": {
-        "width": 1280,
-        "height": 720
-    },
-    "duration": 47,
-    "size": 59039744,
-    "ready_to_stream": true,
-    "thumbnail": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/thumbnail.png",
-    "thumbnail_timestamp_pct": null,
-    "storage": {
-        "bucket": "dev-processed-media",
-        "raw_bucket": "raw-client-media",
-        "provider": "omega",
-        "source": {
-            "key": "raw-client-media/69e4ed89/17008615-2fd2-46f3-bb85-2ad4ca0466e1.mp4",
-            "size": 13183260
-        },
-        "meta": null
-    },
-    "meta": {
-        "downloaded_from": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4"
-    }
-}
-```
-
-To see the [full body](/video/webhooks/events)
-
 #### Available events are
 
 - `video.uploaded` ⚠️ Triggered when video is uploaded or ready to be pushed for processing.
@@ -136,11 +77,14 @@ To see the [full body](/video/webhooks/events)
 
 - `video.ready_to_watch` ❌ Triggered when video is ready to be watched right now.
 
-- `video.deleted` ⚠️ Triggered when the video is successfully deleted.
+- `video.deleted` ✅ Triggered when the video is successfully deleted.
+    > Called when the video is marked for deletion. (not when it is actually deleted.)
 
-- `video.failed_to_delete` ⚠️ Triggered when the video deleted failed.
+- `video.failed_to_delete` ✅ Triggered when the video deleted failed.
+    > Called when the video failed to be marked for deletion. (not when it is actually deleted)
 
-- `video.deletion_reverted` ⚠️ Triggered when the video deletion is reverted.
+- `video.deletion_reverted` ✅ Triggered when the video deletion is reverted.
+    > Called when the video deletion is reverted.
 
 **Keys:**
 

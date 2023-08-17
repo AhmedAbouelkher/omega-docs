@@ -68,13 +68,16 @@ New Updates came to the video model as of 2023-06-22.
 | Field     | Type       | Description                        | Nullable |
 |-----------|------------|------------------------------------|----------|
 | id        | string   | video db id                        | NO       |
+| created_at        | string   | time of video creation [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted. | NO  |
+| updated_at        | string   | time of the latest video update [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted. | NO  |
+| deleted_at        | string   | time of the video deletion [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted. You can use it to determine if the video is marked for deletion or not. | YES  |
 | title     | string   | video title           | NO       |
 | coid      | string   | company's omega id.                | NO       |
 | status    | string   | video current status. for [more](#video-status) | NO       |
 | Privacy    | string   | video current privacy. `private` and `public` | NO       |
 | entity_id | string   | video s3 storage id.               | YES      |
-| playback_v2  | [Playback V2](#playback-v2) | play back options.    | YES      |
-| playback **Deprecated** | [Playback](#playback-deprecated) | playback options. See [playback_v2](#playback-v2)    | YES      |
+| playback_v2  | [Playback V2](#playback-v2) | playback options.    | YES      |
+| playback **Deprecated** | [Playback](#playback-deprecated) | playback options. This field is deprecated See [playback_v2](#playback-v2)    | YES      |
 | input     | [Input](#video-input)    | uploaded video size details.        | YES      |
 | size  | integer  | video size in *bytes*.              | YES      |
 | duration  | integer  | video duration in *seconds*.              | YES      |
@@ -114,7 +117,7 @@ This the exact same as [Playback](#playback) but with the following changes:
 |-----------|------------|------------------------------------|----------|
 | hls        | string   | direct video streaming url    | YES       |
 | dash        | string   | direct video streaming url    | YES       |
-| audio        | string   | direct audio streaming url (AAC)    | YES       |
+| audio        | string   | direct audio streaming url ([AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding))    | YES  |
 |   r_1080p      | string   | direct link for 1080p resolution     | YES       |
 |   r_720p      | string   | direct link for 720p resolution     | YES       |
 |   r_480p      | string   | direct link for 480p resolution     | YES       |
@@ -170,77 +173,5 @@ Example:
 {
     "downloaded_from" : "https://example.com/dashboard/download/storage/VEc5dVp5QndiMnhzSUhKbGNYVmxjM1J6SUhkcGRHZ2dUR0Z5WVhabGJDNXRjRFE9",
     "failure" : "AccessDenied: Access Denied\n\tstatus code: 403, request id: 588945944CC48625:B, host id: btRoYPJTQm8NRBFi3Pc07IkikXlsK7QHfC8XuCI9kN1T5DtP26rg7PIkLgU5GLaeeJ80rjoBgx1K"
-}
-```
-
----
-
-# Fetch Video Full Info
-
-Fetches the video full info with its UUID.
-
-{{% notice note %}}
-Base url `https://api.omegastream.net/company/client/video` this will be called from now as *`{base_url}`*
-{{% /notice %}}
-
-### Endpoint
-
-```url
-GET: {base_url}/:uuid
-```
-
-- **:uuid**: video's uuid. (ex: `a0dc8dbf-3126-4805-89a1-662a33331f93`)
-
-### Headers
-
-| Key           | Value              | Details                                                 |
-|---------------|--------------------|---------------------------------------------------------|
-| Authorization | Bearer *{{api_key}}* | api key is very important here to authorize your request. |
-| Content-Type  | application/json   |                                                         |
-
-
-### Response
-
-Status Code: `200`
-
-```json
-{
-    "id": "63fcdbd82eec9b89aa5bfdf3",
-    "created_at": "2023-02-27T16:35:36.008Z",
-    "updated_at": "2023-02-27T16:55:26.156Z",
-    "deleted_at": null,
-    "title": "WeAreGoingOnBullrun",
-    "uuid": "17008615-2fd2-46f3-bb85-2ad4ca0466e1",
-    "coid": "omega-cop-f60d8a4c",
-    "status": "process-completed",
-    "privacy": "private",
-    "playback": {
-        ...
-    },
-    "playback_v2": {
-        ...
-    },
-    "input": {
-        "width": 1280,
-        "height": 720
-    },
-    "duration": 47,
-    "size": 59039744,
-    "ready_to_stream": true,
-    "thumbnail": "s3://dev-processed-media/69e4ed89/video/17008615-2fd2-46f3-bb85-2ad4ca0466e1/thumbnail.png",
-    "thumbnail_timestamp_pct": null,
-    "storage": {
-        "bucket": "dev-processed-media",
-        "raw_bucket": "raw-client-media",
-        "provider": "omega",
-        "source": {
-            "key": "raw-client-media/69e4ed89/17008615-2fd2-46f3-bb85-2ad4ca0466e1.mp4",
-            "size": 13183260
-        },
-        "meta": null
-    },
-    "meta": {
-        "downloaded_from": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4"
-    }
 }
 ```
