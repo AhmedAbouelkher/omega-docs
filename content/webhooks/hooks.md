@@ -66,7 +66,7 @@ To learn more about the available *events* and how to use theme, checkout [Creat
 PUT: [base_url]/company/webhooks/:id
 ```
 
-- **:id** is the endpoint `_id` value.
+- **:id** is the endpoint `id` value.
 
 ---
 
@@ -80,7 +80,7 @@ Delete a specific webhook, thus not sending any future event to it.
 DELETE: [base_url]/company/webhooks/:id
 ```
 
-- **:id** is the endpoint `_id` value.
+- **:id** is the endpoint `id` value.
  
 ### Headers
 
@@ -110,7 +110,7 @@ You simply activate or deactivate your endpoint.
 POST: [base_url]/company/webhooks/:id/status
 ```
 
-- **:id** is the endpoint `_id` value.
+- **:id** is the endpoint `id` value.
 
 
 ### Headers

@@ -111,6 +111,7 @@ This the exact same as [Playback](#playback) but with the following changes:
 - We prefixed the streaming link with `s3://` to indicate that this is a direct link to the video.
 
 - We added `?s=AUTH_SIGNATURE` to the end of the link to indicate that this link is signed and can be used for a limited time.
+
     > Signature is auto generated and can be used indefinitely.
 
 | Field     | Type       | Description                        | Nullable |

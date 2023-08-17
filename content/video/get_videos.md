@@ -20,6 +20,7 @@ GET: https://api.omegastream.net/company/client/video
 
 - `status`: fetch videos status. to learn more see [video status](/video/video_model#video-status)
 - `collection`: collection id to fetch videos from specific collection.
+
     > If you don't want to select specific collection just leave it empty or don't send it.
 - `page`: page number to fetch videos from.
 - `limit`: limit number of videos to fetch.

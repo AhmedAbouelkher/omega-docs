@@ -63,6 +63,22 @@ They are the triggers on which you will be receiving a new event with a structur
 
 #### Available events are
 
+- `video.process_failed` ✅ Triggered when video processing failed.
+
+- `video.process_succeeded` ✅ Triggered when video processing succeeded.
+
+- `video.deleted` ✅ Triggered when the video is successfully deleted.
+
+    > Called when the video is marked for deletion. (not when it is actually deleted.)
+
+- `video.failed_to_delete` ✅ Triggered when the video deleted failed.
+
+    > Called when the video failed to be marked for deletion. (not when it is actually deleted)
+
+- `video.deletion_reverted` ✅ Triggered when the video deletion is reverted.
+
+    > Called when the video deletion is reverted.
+
 - `video.uploaded` ⚠️ Triggered when video is uploaded or ready to be pushed for processing.
 
 - `video.ready_for_processing` ❌ Triggered when video is pushed for processing and ready (but not yet processed).
@@ -71,20 +87,7 @@ They are the triggers on which you will be receiving a new event with a structur
 
 - `video.completed_processing` ❌ Triggered when video processing is complete. (but not yet confirmed to be working and with no confirmed success)
 
-- `video.process_failed` ✅ Triggered when video processing failed.
-
-- `video.process_succeeded` ✅ Triggered when video processing succeeded.
-
 - `video.ready_to_watch` ❌ Triggered when video is ready to be watched right now.
-
-- `video.deleted` ✅ Triggered when the video is successfully deleted.
-    > Called when the video is marked for deletion. (not when it is actually deleted.)
-
-- `video.failed_to_delete` ✅ Triggered when the video deleted failed.
-    > Called when the video failed to be marked for deletion. (not when it is actually deleted)
-
-- `video.deletion_reverted` ✅ Triggered when the video deletion is reverted.
-    > Called when the video deletion is reverted.
 
 **Keys:**
 

@@ -19,6 +19,7 @@ GET: {base_url}/deleted
 ### Query Params
 
 - `collection`: collection id to fetch videos from specific collection.
+
     > If you don't want to select specific collection just leave it empty or don't send it.
 - `page`: page number to fetch videos from.
 - `limit`: limit number of videos to fetch.
