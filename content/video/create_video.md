@@ -21,7 +21,7 @@ POST: https://api.omegastream.net/company/client/video
 - `collection`: collection id. ex: `63fcdbd82eec9b89aa5bfdf3` it can be `nullable`
 
     > if you don't want to add this video to any collection, you can leave this field empty.
-    
+
     > You can move a video later to a collection using [Move Videos to Collection](/collection/move_videos_to_collection)
 
 

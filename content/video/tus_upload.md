@@ -42,6 +42,11 @@ The tus protocol allows you to add optional parameters [in the `Upload-Metadata`
 
 - `title` Setting this key will set `meta.title` in the API and display the value as the name of the video in the dashboard.
 
+- `collection`: collection id. ex: `63fcdbd82eec9b89aa5bfdf3` it can be empty.
+  > if you don't want to add this video to any collection, you can leave this field empty.
+
+    > You can move a video later to a collection using [Move Videos to Collection](/collection/move_videos_to_collection)
+
 ### Getting the video ID when using TUS
 
 When an initial TUS request is made, Stream responds with a URL in the location header. While this URL may contain the video ID, it is not recommend to parse this URL to get the ID.
@@ -160,6 +165,8 @@ var options = {
   metadata: {
     filename: 'test.mp4',
     filetype: 'video/mp4',
+    // The collection id of the uploaded video
+    collection: "<COLLECTION_ID>"
   },
   uploadSize: size,
   onError: function (error) {
