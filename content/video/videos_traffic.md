@@ -27,7 +27,12 @@ POST: {base_url}/traffic
 }
 ```
 
-- ```uuids```: array of video's uuids. min length is 1 and max length is 30.
+- ```uuids```: array of video's uuids. min length is 1 and max length is 50.
+
+### Query Params
+
+- `start_time` (optional): start time to get the traffic from. format is `YYYY-MM-DDTHH:mm:ssZ`.
+- `end_time` (optional): end time to get the traffic to. format is `YYYY-MM-DDTHH:mm:ssZ`.
 
 ### Headers
 
@@ -47,7 +52,9 @@ Status Code: `200` OK
         "a0dc8dbf-3126-4805-89a1-662a33331f93"
         "ec070291-f584-4ce0-af1a-58fbe46cb905"
     ],
-    "queried_at": "2023-06-22T17:04:05Z",
+    "end_time": "2023-07-29T00:00:14Z",
+    "queried_at": "2023-09-26T19:10:37.996208329Z",
+    "start_time": "2023-06-01T00:00:14Z",
     "videos_traffic": {
         "number_of_requests": 6650,
         "traffic_in_bytes": 1231674842132,
@@ -56,3 +63,5 @@ Status Code: `200` OK
     }
 }
 ```
+
+- `end_time` and `start_time` are nullable.

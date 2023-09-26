@@ -24,7 +24,6 @@ POST: https://api.omegastream.net/company/client/video
 
     > You can move a video later to a collection using [Move Videos to Collection](/collection/move_videos_to_collection)
 
-
 ### Headers
 
 | Key           | Value              | Details                                                 |
