@@ -40,8 +40,15 @@ Status Code: `200` OK
 ```
 
 - `url`: The source download url.
+
     > Do not assume any thing about the `SRC_DOWNLOAD_URL` it can be a temporary url or a permanent url. It is recommended to request the source url when you need it.
 
 - `expires_in`: The time in seconds until the link expires.
 
+    > The default expiration time is 30 minutes (1800 seconds). You can not request any change right now to this value but you can request a new source url when you need it.
+
 - `expires_at`: The UTC date and time when the link will expire.
+
+{{% notice note %}}
+The default expiration time is 30 minutes (1800 seconds). You can not request any change right now to this value but you can request a new source url when you need it.
+{{% /notice %}}
